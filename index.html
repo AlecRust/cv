@@ -1,479 +1,1474 @@
 <!doctype html>
 <html>
   <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-
-  <title>Alec Rust</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-
-  <style type="text/css">
-  @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-
-body {
-  background: #fff;
-  font-family: Lato, sans-serif;
-  margin: 0 0 80px;
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+    <title>Alec Rust</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+    <style>
+      /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+progress,sub,sup {
+  vertical-align: baseline
 }
-
+button,hr,input {
+  overflow: visible
+}
+[type=checkbox],[type=radio],legend {
+  box-sizing: border-box;
+  padding: 0
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+body {
+  margin: 0
+}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary {
+  display: block
+}
+audio,canvas,progress,video {
+  display: inline-block
+}
+audio:not([controls]) {
+  display: none;
+  height: 0
+}
+[hidden],template {
+  display: none
+}
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects
+}
+a:active,a:hover {
+  outline-width: 0
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted
+}
+b,strong {
+  font-weight: bolder
+}
+dfn {
+  font-style: italic
+}
+h1 {
+  font-size: 2em;
+  margin: .67em 0
+}
+mark {
+  background-color: #ff0;
+  color: #000
+}
+small {
+  font-size: 80%
+}
+sub,sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative
+}
+sub {
+  bottom: -.25em
+}
+sup {
+  top: -.5em
+}
+img {
+  border-style: none
+}
+svg:not(:root) {
+  overflow: hidden
+}
+code,kbd,pre,samp {
+  font-family: monospace,monospace;
+  font-size: 1em
+}
+figure {
+  margin: 1em 40px
+}
+hr {
+  box-sizing: content-box;
+  height: 0
+}
+button,input,select,textarea {
+  font: inherit;
+  margin: 0
+}
+optgroup {
+  font-weight: 700
+}
+button,select {
+  text-transform: none
+}
+[type=reset],[type=submit],button,html [type=button] {
+  -webkit-appearance: button
+}
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner {
+  border-style: none;
+  padding: 0
+}
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring {
+  outline: ButtonText dotted 1px
+}
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em
+}
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  white-space: normal
+}
+textarea {
+  overflow: auto
+}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button {
+  height: auto
+}
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px
+}
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit
+}
+/* Theme base */
+* {
+  box-sizing: border-box
+}
+*:before,
+*:after {
+  box-sizing: border-box
+}
+html {
+  font-size: 10px
+}
+body {
+  margin: 0 0 80px;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  font-family: "Lato", Arial, sans-serif;
+  line-height: 1.42857143
+}
 a {
   color: #2ecc71;
+  text-decoration: none
 }
-
 a:focus, a:hover {
   color: #f1c40f;
-  text-decoration: none;
+  text-decoration: none
 }
-
 p {
-  line-height: 1.5;
   margin: 0;
+  line-height: 1.5
 }
-
 p + p {
-  margin-top: 10px;
+  margin-top: 10px
 }
-
-h1, h2, h3, h4 {
-  margin-top: 0
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  color: inherit;
+  font-weight: 500;
+  font-family: inherit;
+  line-height: 1.1
 }
-
+h1,
+h2,
+h3 {
+  margin-bottom: 10px
+}
+h1 {
+  font-size: 36px
+}
+h2 {
+  font-size: 30px
+}
+h3 {
+  font-size: 24px
+}
+h4 {
+  margin-bottom: 10px;
+  font-size: 18px
+}
 section {
-  margin-top: 30px;
+  margin-top: 30px
 }
-
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0
+}
+dl {
+  margin-top: 0;
+  margin-bottom: 20px
+}
+dt,
+dd {
+  line-height: 1.42857143
+}
+dt {
+  font-weight: bold
+}
+dd {
+  margin-left: 0
+}
 li {
-  line-height: 1.8;
   list-style: none;
+  line-height: 1.8
 }
-
 li:before {
-  content: "\f052";
+  position: absolute;
   float: left;
-  font: 13px Octicons;
   margin-top: 6px;
   margin-left: -20px;
-  opacity: .1;
-  position: absolute;
+  content: "\f052";
+  font: 13px Octicons;
+  opacity: .1
 }
-
+abbr[title],
+abbr[data-original-title] {
+  border-bottom: 1px dotted #777;
+  cursor: help
+}
 blockquote {
+  margin: 0 0 20px;
+  padding: 10px 20px;
   border-left: 5px solid #e7e9ec;
-  font-size: 14px;
+  font-size: 14px
 }
-
+blockquote p:last-child {
+  margin-bottom: 0
+}
 em {
   color: #95a5a6;
   font-weight: normal;
-  font-style: normal;
+  font-style: normal
 }
+/* Container */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 30px
+  /* padding-right: 15px Bootstrap 3.2.0 original */
+  /* padding-left: 15px Bootstrap 3.2.0 original */
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px
+  }
+}
+/* Utilities */
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " "
+}
+.clearfix:after {
+  clear: both
+}
+.pull-right {
+  float: right !important
+}
+.pull-left {
+  float: left !important
+}
+/* Bootstrap grid */
+.row {
+  margin-right: -15px;
+  margin-left: -15px
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  min-height: 1px
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left
+}
+.col-xs-12 {
+  width: 100%
+}
+.col-xs-11 {
+  width: 91.66666667%
+}
+.col-xs-10 {
+  width: 83.33333333%
+}
+.col-xs-9 {
+  width: 75%
+}
+.col-xs-8 {
+  width: 66.66666667%
+}
+.col-xs-7 {
+  width: 58.33333333%
+}
+.col-xs-6 {
+  width: 50%
+}
+.col-xs-5 {
+  width: 41.66666667%
+}
+.col-xs-4 {
+  width: 33.33333333%
+}
+.col-xs-3 {
+  width: 25%
+}
+.col-xs-2 {
+  width: 16.66666667%
+}
+.col-xs-1 {
+  width: 8.33333333%
+}
+.col-xs-pull-12 {
+  right: 100%
+}
+.col-xs-pull-11 {
+  right: 91.66666667%
+}
+.col-xs-pull-10 {
+  right: 83.33333333%
+}
+.col-xs-pull-9 {
+  right: 75%
+}
+.col-xs-pull-8 {
+  right: 66.66666667%
+}
+.col-xs-pull-7 {
+  right: 58.33333333%
+}
+.col-xs-pull-6 {
+  right: 50%
+}
+.col-xs-pull-5 {
+  right: 41.66666667%
+}
+.col-xs-pull-4 {
+  right: 33.33333333%
+}
+.col-xs-pull-3 {
+  right: 25%
+}
+.col-xs-pull-2 {
+  right: 16.66666667%
+}
+.col-xs-pull-1 {
+  right: 8.33333333%
+}
+.col-xs-pull-0 {
+  right: auto
+}
+.col-xs-push-12 {
+  left: 100%
+}
+.col-xs-push-11 {
+  left: 91.66666667%
+}
+.col-xs-push-10 {
+  left: 83.33333333%
+}
+.col-xs-push-9 {
+  left: 75%
+}
+.col-xs-push-8 {
+  left: 66.66666667%
+}
+.col-xs-push-7 {
+  left: 58.33333333%
+}
+.col-xs-push-6 {
+  left: 50%
+}
+.col-xs-push-5 {
+  left: 41.66666667%
+}
+.col-xs-push-4 {
+  left: 33.33333333%
+}
+.col-xs-push-3 {
+  left: 25%
+}
+.col-xs-push-2 {
+  left: 16.66666667%
+}
+.col-xs-push-1 {
+  left: 8.33333333%
+}
+.col-xs-push-0 {
+  left: auto
+}
+.col-xs-offset-12 {
+  margin-left: 100%
+}
+.col-xs-offset-11 {
+  margin-left: 91.66666667%
+}
+.col-xs-offset-10 {
+  margin-left: 83.33333333%
+}
+.col-xs-offset-9 {
+  margin-left: 75%
+}
+.col-xs-offset-8 {
+  margin-left: 66.66666667%
+}
+.col-xs-offset-7 {
+  margin-left: 58.33333333%
+}
+.col-xs-offset-6 {
+  margin-left: 50%
+}
+.col-xs-offset-5 {
+  margin-left: 41.66666667%
+}
+.col-xs-offset-4 {
+  margin-left: 33.33333333%
+}
+.col-xs-offset-3 {
+  margin-left: 25%
+}
+.col-xs-offset-2 {
+  margin-left: 16.66666667%
+}
+.col-xs-offset-1 {
+  margin-left: 8.33333333%
+}
+.col-xs-offset-0 {
+  margin-left: 0
+}
+@media (min-width: 768px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left
+  }
 
+  .col-sm-12 {
+    width: 100%
+  }
+
+  .col-sm-11 {
+    width: 91.66666667%
+  }
+
+  .col-sm-10 {
+    width: 83.33333333%
+  }
+
+  .col-sm-9 {
+    width: 75%
+  }
+
+  .col-sm-8 {
+    width: 66.66666667%
+  }
+
+  .col-sm-7 {
+    width: 58.33333333%
+  }
+
+  .col-sm-6 {
+    width: 50%
+  }
+
+  .col-sm-5 {
+    width: 41.66666667%
+  }
+
+  .col-sm-4 {
+    width: 33.33333333%
+  }
+
+  .col-sm-3 {
+    width: 25%
+  }
+
+  .col-sm-2 {
+    width: 16.66666667%
+  }
+
+  .col-sm-1 {
+    width: 8.33333333%
+  }
+
+  .col-sm-pull-12 {
+    right: 100%
+  }
+
+  .col-sm-pull-11 {
+    right: 91.66666667%
+  }
+
+  .col-sm-pull-10 {
+    right: 83.33333333%
+  }
+
+  .col-sm-pull-9 {
+    right: 75%
+  }
+
+  .col-sm-pull-8 {
+    right: 66.66666667%
+  }
+
+  .col-sm-pull-7 {
+    right: 58.33333333%
+  }
+
+  .col-sm-pull-6 {
+    right: 50%
+  }
+
+  .col-sm-pull-5 {
+    right: 41.66666667%
+  }
+
+  .col-sm-pull-4 {
+    right: 33.33333333%
+  }
+
+  .col-sm-pull-3 {
+    right: 25%
+  }
+
+  .col-sm-pull-2 {
+    right: 16.66666667%
+  }
+
+  .col-sm-pull-1 {
+    right: 8.33333333%
+  }
+
+  .col-sm-pull-0 {
+    right: auto
+  }
+
+  .col-sm-push-12 {
+    left: 100%
+  }
+
+  .col-sm-push-11 {
+    left: 91.66666667%
+  }
+
+  .col-sm-push-10 {
+    left: 83.33333333%
+  }
+
+  .col-sm-push-9 {
+    left: 75%
+  }
+
+  .col-sm-push-8 {
+    left: 66.66666667%
+  }
+
+  .col-sm-push-7 {
+    left: 58.33333333%
+  }
+
+  .col-sm-push-6 {
+    left: 50%
+  }
+
+  .col-sm-push-5 {
+    left: 41.66666667%
+  }
+
+  .col-sm-push-4 {
+    left: 33.33333333%
+  }
+
+  .col-sm-push-3 {
+    left: 25%
+  }
+
+  .col-sm-push-2 {
+    left: 16.66666667%
+  }
+
+  .col-sm-push-1 {
+    left: 8.33333333%
+  }
+
+  .col-sm-push-0 {
+    left: auto
+  }
+
+  .col-sm-offset-12 {
+    margin-left: 100%
+  }
+
+  .col-sm-offset-11 {
+    margin-left: 91.66666667%
+  }
+
+  .col-sm-offset-10 {
+    margin-left: 83.33333333%
+  }
+
+  .col-sm-offset-9 {
+    margin-left: 75%
+  }
+
+  .col-sm-offset-8 {
+    margin-left: 66.66666667%
+  }
+
+  .col-sm-offset-7 {
+    margin-left: 58.33333333%
+  }
+
+  .col-sm-offset-6 {
+    margin-left: 50%
+  }
+
+  .col-sm-offset-5 {
+    margin-left: 41.66666667%
+  }
+
+  .col-sm-offset-4 {
+    margin-left: 33.33333333%
+  }
+
+  .col-sm-offset-3 {
+    margin-left: 25%
+  }
+
+  .col-sm-offset-2 {
+    margin-left: 16.66666667%
+  }
+
+  .col-sm-offset-1 {
+    margin-left: 8.33333333%
+  }
+
+  .col-sm-offset-0 {
+    margin-left: 0
+  }
+}
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left
+  }
+
+  .col-md-12 {
+    width: 100%
+  }
+
+  .col-md-11 {
+    width: 91.66666667%
+  }
+
+  .col-md-10 {
+    width: 83.33333333%
+  }
+
+  .col-md-9 {
+    width: 75%
+  }
+
+  .col-md-8 {
+    width: 66.66666667%
+  }
+
+  .col-md-7 {
+    width: 58.33333333%
+  }
+
+  .col-md-6 {
+    width: 50%
+  }
+
+  .col-md-5 {
+    width: 41.66666667%
+  }
+
+  .col-md-4 {
+    width: 33.33333333%
+  }
+
+  .col-md-3 {
+    width: 25%
+  }
+
+  .col-md-2 {
+    width: 16.66666667%
+  }
+
+  .col-md-1 {
+    width: 8.33333333%
+  }
+
+  .col-md-pull-12 {
+    right: 100%
+  }
+
+  .col-md-pull-11 {
+    right: 91.66666667%
+  }
+
+  .col-md-pull-10 {
+    right: 83.33333333%
+  }
+
+  .col-md-pull-9 {
+    right: 75%
+  }
+
+  .col-md-pull-8 {
+    right: 66.66666667%
+  }
+
+  .col-md-pull-7 {
+    right: 58.33333333%
+  }
+
+  .col-md-pull-6 {
+    right: 50%
+  }
+
+  .col-md-pull-5 {
+    right: 41.66666667%
+  }
+
+  .col-md-pull-4 {
+    right: 33.33333333%
+  }
+
+  .col-md-pull-3 {
+    right: 25%
+  }
+
+  .col-md-pull-2 {
+    right: 16.66666667%
+  }
+
+  .col-md-pull-1 {
+    right: 8.33333333%
+  }
+
+  .col-md-pull-0 {
+    right: auto
+  }
+
+  .col-md-push-12 {
+    left: 100%
+  }
+
+  .col-md-push-11 {
+    left: 91.66666667%
+  }
+
+  .col-md-push-10 {
+    left: 83.33333333%
+  }
+
+  .col-md-push-9 {
+    left: 75%
+  }
+
+  .col-md-push-8 {
+    left: 66.66666667%
+  }
+
+  .col-md-push-7 {
+    left: 58.33333333%
+  }
+
+  .col-md-push-6 {
+    left: 50%
+  }
+
+  .col-md-push-5 {
+    left: 41.66666667%
+  }
+
+  .col-md-push-4 {
+    left: 33.33333333%
+  }
+
+  .col-md-push-3 {
+    left: 25%
+  }
+
+  .col-md-push-2 {
+    left: 16.66666667%
+  }
+
+  .col-md-push-1 {
+    left: 8.33333333%
+  }
+
+  .col-md-push-0 {
+    left: auto
+  }
+
+  .col-md-offset-12 {
+    margin-left: 100%
+  }
+
+  .col-md-offset-11 {
+    margin-left: 91.66666667%
+  }
+
+  .col-md-offset-10 {
+    margin-left: 83.33333333%
+  }
+
+  .col-md-offset-9 {
+    margin-left: 75%
+  }
+
+  .col-md-offset-8 {
+    margin-left: 66.66666667%
+  }
+
+  .col-md-offset-7 {
+    margin-left: 58.33333333%
+  }
+
+  .col-md-offset-6 {
+    margin-left: 50%
+  }
+
+  .col-md-offset-5 {
+    margin-left: 41.66666667%
+  }
+
+  .col-md-offset-4 {
+    margin-left: 33.33333333%
+  }
+
+  .col-md-offset-3 {
+    margin-left: 25%
+  }
+
+  .col-md-offset-2 {
+    margin-left: 16.66666667%
+  }
+
+  .col-md-offset-1 {
+    margin-left: 8.33333333%
+  }
+
+  .col-md-offset-0 {
+    margin-left: 0
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left
+  }
+
+  .col-lg-12 {
+    width: 100%
+  }
+
+  .col-lg-11 {
+    width: 91.66666667%
+  }
+
+  .col-lg-10 {
+    width: 83.33333333%
+  }
+
+  .col-lg-9 {
+    width: 75%
+  }
+
+  .col-lg-8 {
+    width: 66.66666667%
+  }
+
+  .col-lg-7 {
+    width: 58.33333333%
+  }
+
+  .col-lg-6 {
+    width: 50%
+  }
+
+  .col-lg-5 {
+    width: 41.66666667%
+  }
+
+  .col-lg-4 {
+    width: 33.33333333%
+  }
+
+  .col-lg-3 {
+    width: 25%
+  }
+
+  .col-lg-2 {
+    width: 16.66666667%
+  }
+
+  .col-lg-1 {
+    width: 8.33333333%
+  }
+
+  .col-lg-pull-12 {
+    right: 100%
+  }
+
+  .col-lg-pull-11 {
+    right: 91.66666667%
+  }
+
+  .col-lg-pull-10 {
+    right: 83.33333333%
+  }
+
+  .col-lg-pull-9 {
+    right: 75%
+  }
+
+  .col-lg-pull-8 {
+    right: 66.66666667%
+  }
+
+  .col-lg-pull-7 {
+    right: 58.33333333%
+  }
+
+  .col-lg-pull-6 {
+    right: 50%
+  }
+
+  .col-lg-pull-5 {
+    right: 41.66666667%
+  }
+
+  .col-lg-pull-4 {
+    right: 33.33333333%
+  }
+
+  .col-lg-pull-3 {
+    right: 25%
+  }
+
+  .col-lg-pull-2 {
+    right: 16.66666667%
+  }
+
+  .col-lg-pull-1 {
+    right: 8.33333333%
+  }
+
+  .col-lg-pull-0 {
+    right: auto
+  }
+
+  .col-lg-push-12 {
+    left: 100%
+  }
+
+  .col-lg-push-11 {
+    left: 91.66666667%
+  }
+
+  .col-lg-push-10 {
+    left: 83.33333333%
+  }
+
+  .col-lg-push-9 {
+    left: 75%
+  }
+
+  .col-lg-push-8 {
+    left: 66.66666667%
+  }
+
+  .col-lg-push-7 {
+    left: 58.33333333%
+  }
+
+  .col-lg-push-6 {
+    left: 50%
+  }
+
+  .col-lg-push-5 {
+    left: 41.66666667%
+  }
+
+  .col-lg-push-4 {
+    left: 33.33333333%
+  }
+
+  .col-lg-push-3 {
+    left: 25%
+  }
+
+  .col-lg-push-2 {
+    left: 16.66666667%
+  }
+
+  .col-lg-push-1 {
+    left: 8.33333333%
+  }
+
+  .col-lg-push-0 {
+    left: auto
+  }
+
+  .col-lg-offset-12 {
+    margin-left: 100%
+  }
+
+  .col-lg-offset-11 {
+    margin-left: 91.66666667%
+  }
+
+  .col-lg-offset-10 {
+    margin-left: 83.33333333%
+  }
+
+  .col-lg-offset-9 {
+    margin-left: 75%
+  }
+
+  .col-lg-offset-8 {
+    margin-left: 66.66666667%
+  }
+
+  .col-lg-offset-7 {
+    margin-left: 58.33333333%
+  }
+
+  .col-lg-offset-6 {
+    margin-left: 50%
+  }
+
+  .col-lg-offset-5 {
+    margin-left: 41.66666667%
+  }
+
+  .col-lg-offset-4 {
+    margin-left: 33.33333333%
+  }
+
+  .col-lg-offset-3 {
+    margin-left: 25%
+  }
+
+  .col-lg-offset-2 {
+    margin-left: 16.66666667%
+  }
+
+  .col-lg-offset-1 {
+    margin-left: 8.33333333%
+  }
+
+  .col-lg-offset-0 {
+    margin-left: 0
+  }
+}
 h4 span:first-child {
   color: #000;
-  font-weight: bold;
+  font-weight: bold
 }
-
-.container {
-  max-width: 750px;
-  padding: 0 30px;
-}
-
 .col-sm-6 {
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
-
 .col-sm-12 h4 {
-  margin-top: 12px;
+  margin-top: 12px
 }
-
 .col-sm-12 + .col-sm-12 {
-  margin-top: 30px;
+  margin-top: 30px
 }
-
 #header {
-  background: #f4f6f6;
-  padding: 50px 0;
   margin-bottom: 30px;
+  padding: 50px 0;
+  background: #f4f6f6
 }
-
 #header h2 {
   color: #95a5a6;
-  font-size: 24px;
+  font-size: 24px
 }
-
 #content h3 {
-  color: #f1c40f;
-  font-size: 26px;
   margin-top: -4px;
+  color: #f1c40f;
+  font-size: 26px
 }
-
 #content aside {
-  text-align: right;
   padding-right: 30px;
+  text-align: right
 }
-
 #profiles .network {
-  text-transform: capitalize;
+  text-transform: capitalize
 }
-
 #work .position, #volunteer .position {
-  font-weight: bold;
   margin-bottom: 8px;
+  font-weight: bold
 }
-
 #education .area {
-  font-weight: bold;
+  font-weight: bold
 }
-
 #education .area:before {
-  content: "\f0d7";
-  font: 16px Octicons;
   margin-right: 6px;
+  content: "\f0d7";
+  font: 16px Octicons
 }
-
 #education .studyType {
-  margin-left: 25px;
+  margin-left: 25px
 }
-
 #awards .summary, #publications .summary {
-  margin-top: 8px;
+  margin-top: 8px
 }
-
 #publications .website a:before {
-  content: attr(href);
+  content: attr(href)
 }
-
 @media (min-width: 480px) {
-
   .strike-through {
-    border-top: 1px solid #f4f6f6;
-    height: 20px;
+    position: relative;
     margin-top: 12px;
     margin-bottom: -2px;
-    position: relative;
+    height: 20px;
+    border-top: 1px solid #f4f6f6
   }
 
   .strike-through span, .strike-through a {
-    background: #fff;
     position: absolute;
+    background: #fff
   }
 
   .strike-through span:first-child {
-    padding-right: 20px;
     margin-top: -12px;
+    padding-right: 20px
   }
 
   .strike-through span + span {
-    font-size: 14px;
+    right: 0;
     margin-top: -10px;
     padding-left: 20px;
-    right: 0;
+    font-size: 14px
   }
 }
-
 @media (max-width: 768px) {
-
   .col-sm-6:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0px
   }
 
   #content aside {
     margin-bottom: 20px;
     padding-right: 0;
-    text-align: left;
+    text-align: left
   }
 
   #publications .website a:before {
-    content: "View publication";
+    content: "View publication"
   }
 }
-
 @media (max-width: 480px) {
-
   h1 {
-    font-size: 26px;
+    font-size: 26px
   }
 
   .date {
-    font-size: 14px;
     margin-bottom: 5px;
+    font-size: 14px
   }
 
   .strike-through span:first-child {
-    margin-bottom: 7px;
+    margin-bottom: 7px
   }
 
   .strike-through span {
-    display: block;
+    display: block
   }
 
   #header {
     margin-bottom: 10px;
-    padding: 40px 0;
+    padding: 40px 0
   }
 
   #actions {
-    display: none;
+    display: none
   }
 }
 
-  </style>
-
+    </style>
   </head>
   <body>
 
-  <header id="header">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-9 col-sm-push-3">
-          <h1>
-            Alec Rust
-          </h1>
-          <h2>
-            Frontend Developer
-          </h2>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div id="content" class="container">
-
-  <section id="contact" class="row">
-    <aside class="col-sm-3">
-      <h3>Contact</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-      <div class="col-sm-6">
-        <strong>Email</strong>
-        <div class="email">me@alecrust.com</div>
-      </div>
-      <div class="col-sm-6">
-        <strong>Phone</strong>
-        <div class="phone">+447738255500</div>
-      </div>
-      <div class="col-sm-6">
-        <strong>Website</strong>
-        <div class="website">
-          <a href="http://www.alecrust.com">http://www.alecrust.com</a>
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
-  <section id="about" class="row">
-    <aside class="col-sm-3">
-      <h3>About</h3>
-    </aside>
-    <div class="col-sm-9">
-      <p>Experienced frontend developer with a passion for accessibility, performance, SEO and meticulously crafted mobile-first user interfaces. 13 years web development experience, 9 of which in London working for large corporations and startups.</p>
-    </div>
-  </section>
-  <section id="profiles" class="row">
-    <aside class="col-sm-3">
-      <h3>Profiles</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-        <div class="col-sm-6">
-          <strong class="network">
-            GitHub
-          </strong>
-          <div class="username">
-            <div class="url">
-              <a href="https://github.com/AlecRust">AlecRust</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <strong class="network">
-            LinkedIn
-          </strong>
-          <div class="username">
-            <div class="url">
-              <a href="https://www.linkedin.com/in/alecrust/">alecrust</a>
-            </div>
+    <header id="header">
+      <div class="container clearfix">
+        <div class="row clearfix">
+          <div class="col-sm-9 col-sm-push-3">
+            <h1>
+              Alec Rust
+            </h1>
+            <h2>
+              Frontend Developer
+            </h2>
           </div>
         </div>
       </div>
+    </header>
+    <div id="content" class="container clearfix">
+
+      <section id="contact" class="row clearfix">
+        <aside class="col-sm-3">
+          <h3>Contact</h3>
+        </aside>
+        <div class="col-sm-9">
+          <div class="row clearfix">
+          <div class="col-sm-6">
+            <strong>Email</strong>
+            <div class="email">me@alecrust.com</div>
+          </div>
+          <div class="col-sm-6">
+            <strong>Phone</strong>
+            <div class="phone">+447738255500</div>
+          </div>
+          <div class="col-sm-6">
+            <strong>Website</strong>
+            <div class="website">
+              <a href="http://www.alecrust.com">http://www.alecrust.com</a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="row clearfix">
+        <aside class="col-sm-3">
+          <h3>About</h3>
+        </aside>
+        <div class="col-sm-9">
+          <p>Experienced frontend developer with a passion for accessibility, performance, SEO and meticulously crafted mobile-first user interfaces. 13 years web development experience, 9 of which in London working for large corporations and startups.</p>
+        </div>
+      </section>
+      <section id="profiles" class="row clearfix">
+        <aside class="col-sm-3">
+          <h3>Profiles</h3>
+        </aside>
+        <div class="col-sm-9">
+          <div class="row clearfix">
+            <div class="col-sm-6">
+              <strong class="network">
+                GitHub
+              </strong>
+              <div class="username">
+                <div class="url">
+                  <a href="https://github.com/AlecRust">AlecRust</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <strong class="network">
+                LinkedIn
+              </strong>
+              <div class="username">
+                <div class="url">
+                  <a href="https://www.linkedin.com/in/alecrust/">alecrust</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="row clearfix">
+        <aside class="col-sm-3">
+          <h3>Work</h3>
+        </aside>
+        <div class="col-sm-9">
+          <div class="row clearfix">
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span>BBC</span>
+              <span class="date">
+                2015-06-01 — 2016-06-30
+              </span>
+            </h4>
+            <div class="website pull-right">
+              <a href="http://www.bbc.co.uk/bbcthree">http://www.bbc.co.uk/bbcthree</a>
+            </div>
+            <div class="position">
+              Senior Web Developer
+            </div>
+            <div class="summary">
+              <p>Currently working to deliver the new BBC Three website with React/Node for when the channel is taken off air.</p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span>Shopa</span>
+              <span class="date">
+                2014-05-01 — 2015-04-16
+              </span>
+            </h4>
+            <div class="website pull-right">
+              <a href="http://www.shopa.com/">http://www.shopa.com/</a>
+            </div>
+            <div class="position">
+              Director of Frontend Engineering
+            </div>
+            <div class="summary">
+              <p>Led the frontend development of the social shopping platform built on Ruby/Rails, joining the founding team and staying with the company as it grew to 20+ employees.</p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span>Shopa</span>
+              <span class="date">
+                2014-01-01 — 2014-05-01
+              </span>
+            </h4>
+            <div class="website pull-right">
+              <a href="http://www.shopa.com/">http://www.shopa.com/</a>
+            </div>
+            <div class="position">
+              Frontend Developer
+            </div>
+            <div class="summary">
+              <p>Developed the frontend for the social shopping marketplace MVP.</p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span>Universal Music Group</span>
+              <span class="date">
+                2011-12-12 — 2014-01-01
+              </span>
+            </h4>
+            <div class="website pull-right">
+              <a href="http://www.universalmusic.com/">http://www.universalmusic.com/</a>
+            </div>
+            <div class="position">
+              Frontend Developer
+            </div>
+            <div class="summary">
+              <p>Developed artist and label websites as well as launching the new classical music online magazine Sinfini Music.</p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span>BBC Worldwide</span>
+              <span class="date">
+                2010-10-01 — 2011-12-01
+              </span>
+            </h4>
+            <div class="website pull-right">
+              <a href="http://www.bbc.com/">http://www.bbc.com/</a>
+            </div>
+            <div class="position">
+              Commercial Developer
+            </div>
+            <div class="summary">
+              <p>Worked alongside the BBC.com development team to deliver the BBC website to international users.</p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span>BBC Worldwide</span>
+              <span class="date">
+                2009-07-01 — 2010-10-01
+              </span>
+            </h4>
+            <div class="website pull-right">
+              <a href="http://www.bbc.co.uk/">http://www.bbc.co.uk/</a>
+            </div>
+            <div class="position">
+              User Interface Developer
+            </div>
+            <div class="summary">
+              <p>Maintained the BBC &quot;passion sites&quot; including BBC Good Food, Gardeners&#x27; World and Radio Times, and rebuilt the Top Gear website.</p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span>BBC</span>
+              <span class="date">
+                2008-07-01 — 2009-07-01
+              </span>
+            </h4>
+            <div class="website pull-right">
+              <a href="http://www.bbc.co.uk/">http://www.bbc.co.uk/</a>
+            </div>
+            <div class="position">
+              Frontend Developer
+            </div>
+            <div class="summary">
+              <p>Worked with BBC Public Service delivering a customisable BBC homepage for domestic users.</p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span>Alec Rust Ltd</span>
+              <span class="date">
+                2003-01-01 — 2009-06-01
+              </span>
+            </h4>
+            <div class="website pull-right">
+              <a href="http://www.alecrust.com/">http://www.alecrust.com/</a>
+            </div>
+            <div class="position">
+              Freelance Developer/Designer
+            </div>
+            <div class="summary">
+              <p>Assisted small businesses and startups get off the ground with a basic web presence or frontend for their idea.</p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span>RAPP</span>
+              <span class="date">
+                2007-10-01 — 2008-06-01
+              </span>
+            </h4>
+            <div class="website pull-right">
+              <a href="http://www.rapp.com/">http://www.rapp.com/</a>
+            </div>
+            <div class="position">
+              Web Developer
+            </div>
+            <div class="summary">
+              <p>Developed websites and emails for RAPP&#x27;s clients including Apple, Disney, Unicef, Pfizer and Barclays.</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
     </div>
-  </section>
-
-  <section id="work" class="row">
-    <aside class="col-sm-3">
-      <h3>Work</h3>
-    </aside>
-    <div class="col-sm-9">
-      <div class="row">
-      <div class="col-sm-12">
-        <h4 class="strike-through">
-          <span>BBC</span>
-          <span class="date">
-            2015-06-01 — 2016-06-30
-          </span>
-        </h4>
-        <div class="website pull-right">
-          <a href="http://www.bbc.co.uk/bbcthree">http://www.bbc.co.uk/bbcthree</a>
-        </div>
-        <div class="position">
-          Senior Web Developer
-        </div>
-        <div class="summary">
-          <p>Currently working to deliver the new BBC Three website with React/Node for when the channel is taken off air.</p>
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <h4 class="strike-through">
-          <span>Shopa</span>
-          <span class="date">
-            2014-05-01 — 2015-04-16
-          </span>
-        </h4>
-        <div class="website pull-right">
-          <a href="http://www.shopa.com/">http://www.shopa.com/</a>
-        </div>
-        <div class="position">
-          Director of Frontend Engineering
-        </div>
-        <div class="summary">
-          <p>Led the frontend development of the social shopping platform built on Ruby/Rails, joining the founding team and staying with the company as it grew to 20+ employees.</p>
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <h4 class="strike-through">
-          <span>Shopa</span>
-          <span class="date">
-            2014-01-01 — 2014-05-01
-          </span>
-        </h4>
-        <div class="website pull-right">
-          <a href="http://www.shopa.com/">http://www.shopa.com/</a>
-        </div>
-        <div class="position">
-          Frontend Developer
-        </div>
-        <div class="summary">
-          <p>Developed the frontend for the social shopping marketplace MVP.</p>
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <h4 class="strike-through">
-          <span>Universal Music Group</span>
-          <span class="date">
-            2011-12-12 — 2014-01-01
-          </span>
-        </h4>
-        <div class="website pull-right">
-          <a href="http://www.universalmusic.com/">http://www.universalmusic.com/</a>
-        </div>
-        <div class="position">
-          Frontend Developer
-        </div>
-        <div class="summary">
-          <p>Developed artist and label websites as well as launching the new classical music online magazine Sinfini Music.</p>
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <h4 class="strike-through">
-          <span>BBC Worldwide</span>
-          <span class="date">
-            2010-10-01 — 2011-12-01
-          </span>
-        </h4>
-        <div class="website pull-right">
-          <a href="http://www.bbc.com/">http://www.bbc.com/</a>
-        </div>
-        <div class="position">
-          Commercial Developer
-        </div>
-        <div class="summary">
-          <p>Worked alongside the BBC.com development team to deliver the BBC website to international users.</p>
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <h4 class="strike-through">
-          <span>BBC Worldwide</span>
-          <span class="date">
-            2009-07-01 — 2010-10-01
-          </span>
-        </h4>
-        <div class="website pull-right">
-          <a href="http://www.bbc.co.uk/">http://www.bbc.co.uk/</a>
-        </div>
-        <div class="position">
-          User Interface Developer
-        </div>
-        <div class="summary">
-          <p>Maintained the BBC &quot;passion sites&quot; including BBC Good Food, Gardeners&#x27; World and Radio Times, and rebuilt the Top Gear website.</p>
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <h4 class="strike-through">
-          <span>BBC</span>
-          <span class="date">
-            2008-07-01 — 2009-07-01
-          </span>
-        </h4>
-        <div class="website pull-right">
-          <a href="http://www.bbc.co.uk/">http://www.bbc.co.uk/</a>
-        </div>
-        <div class="position">
-          Frontend Developer
-        </div>
-        <div class="summary">
-          <p>Worked with BBC Public Service delivering a customisable BBC homepage for domestic users.</p>
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <h4 class="strike-through">
-          <span>Alec Rust Ltd</span>
-          <span class="date">
-            2003-01-01 — 2009-06-01
-          </span>
-        </h4>
-        <div class="website pull-right">
-          <a href="http://www.alecrust.com/">http://www.alecrust.com/</a>
-        </div>
-        <div class="position">
-          Freelance Developer/Designer
-        </div>
-        <div class="summary">
-          <p>Assisted small businesses and startups get off the ground with a basic web presence or frontend for their idea.</p>
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <h4 class="strike-through">
-          <span>RAPP</span>
-          <span class="date">
-            2007-10-01 — 2008-06-01
-          </span>
-        </h4>
-        <div class="website pull-right">
-          <a href="http://www.rapp.com/">http://www.rapp.com/</a>
-        </div>
-        <div class="position">
-          Web Developer
-        </div>
-        <div class="summary">
-          <p>Developed websites and emails for RAPP&#x27;s clients including Apple, Disney, Unicef, Pfizer and Barclays.</p>
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
-
-
-  </div>
 
   </body>
 </html>
