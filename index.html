@@ -210,6 +210,15 @@ h4 {
   margin-bottom: 10px;
   font-size: 18px
 }
+h4 span:first-child {
+  color: #000;
+  font-weight: bold
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 26px
+  }
+}
 section {
   margin-top: 30px
 }
@@ -270,6 +279,13 @@ em {
   font-weight: normal;
   font-style: normal
 }
+/* Dates */
+@media (max-width: 480px) {
+  .date {
+    margin-bottom: 5px;
+    font-size: 14px
+  }
+}
 /* Container */
 .container {
   margin-right: auto;
@@ -281,6 +297,21 @@ em {
 @media (min-width: 768px) {
   .container {
     width: 750px
+  }
+}
+/* Bootstrap grid overrides */
+.col-sm-6 {
+  margin-bottom: 10px
+}
+.col-sm-12 h4 {
+  margin-top: 12px
+}
+.col-sm-12 + .col-sm-12 {
+  margin-top: 30px
+}
+@media (max-width: 768px) {
+  .col-sm-6:last-child {
+    margin-bottom: 0
   }
 }
 /* Utilities */
@@ -1092,19 +1123,6 @@ em {
     margin-left: 0
   }
 }
-h4 span:first-child {
-  color: #000;
-  font-weight: bold
-}
-.col-sm-6 {
-  margin-bottom: 10px
-}
-.col-sm-12 h4 {
-  margin-top: 12px
-}
-.col-sm-12 + .col-sm-12 {
-  margin-top: 30px
-}
 #header {
   margin-bottom: 30px;
   padding: 50px 0;
@@ -1113,6 +1131,12 @@ h4 span:first-child {
 #header h2 {
   color: #95a5a6;
   font-size: 24px
+}
+@media (max-width: 480px) {
+  #header {
+    margin-bottom: 10px;
+    padding: 40px 0
+  }
 }
 #content h3 {
   margin-top: -4px;
@@ -1123,10 +1147,18 @@ h4 span:first-child {
   padding-right: 30px;
   text-align: right
 }
+@media (max-width: 768px) {
+  #content aside {
+    margin-bottom: 20px;
+    padding-right: 0;
+    text-align: left
+  }
+}
 #profiles .network {
   text-transform: capitalize
 }
-#work .position, #volunteer .position {
+#work .position,
+#volunteer .position {
   margin-bottom: 8px;
   font-weight: bold
 }
@@ -1141,11 +1173,22 @@ h4 span:first-child {
 #education .studyType {
   margin-left: 25px
 }
-#awards .summary, #publications .summary {
+#awards .summary,
+#publications .summary {
   margin-top: 8px
 }
 #publications .website a:before {
   content: attr(href)
+}
+@media (max-width: 768px) {
+  #publications .website a:before {
+    content: "View publication"
+  }
+}
+@media (max-width: 480px) {
+  #actions {
+    display: none
+  }
 }
 @media (min-width: 480px) {
   .strike-through {
@@ -1153,10 +1196,11 @@ h4 span:first-child {
     margin-top: 12px;
     margin-bottom: -2px;
     height: 20px;
-    border-top: 1px solid #f4f6f6
+    border-top: 1px solid #f1f1f1
   }
 
-  .strike-through span, .strike-through a {
+  .strike-through span,
+  .strike-through a {
     position: absolute;
     background: #fff
   }
@@ -1173,46 +1217,13 @@ h4 span:first-child {
     font-size: 14px
   }
 }
-@media (max-width: 768px) {
-  .col-sm-6:last-child {
-    margin-bottom: 0px
-  }
-
-  #content aside {
-    margin-bottom: 20px;
-    padding-right: 0;
-    text-align: left
-  }
-
-  #publications .website a:before {
-    content: "View publication"
-  }
-}
 @media (max-width: 480px) {
-  h1 {
-    font-size: 26px
-  }
-
-  .date {
-    margin-bottom: 5px;
-    font-size: 14px
-  }
-
   .strike-through span:first-child {
     margin-bottom: 7px
   }
 
   .strike-through span {
     display: block
-  }
-
-  #header {
-    margin-bottom: 10px;
-    padding: 40px 0
-  }
-
-  #actions {
-    display: none
   }
 }
 
