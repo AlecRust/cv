@@ -1,0 +1,101 @@
+{
+  "basics": {
+    "name": "Alec Rust",
+    "label": "Frontend Developer",
+    "picture": "",
+    "email": "me@alecrust.com",
+    "phone": "+447738255500",
+    "website": "http://www.alecrust.com",
+    "summary": "Experienced frontend developer with a passion for accessibility, performance, SEO and meticulously crafted mobile-first user interfaces. 13 years web development experience, 9 of which in London working for large corporations and startups.",
+    "location": {
+      "city": "London",
+      "countryCode": "UK"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "AlecRust",
+        "url": "https://github.com/AlecRust"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "alecrust",
+        "url": "https://www.linkedin.com/in/alecrust/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "BBC",
+      "position": "Senior Web Developer",
+      "website": "http://www.bbc.co.uk/bbcthree",
+      "startDate": "2015-06-01",
+      "endDate": "2016-06-30",
+      "summary": "Currently working to deliver the new BBC Three website with React/Node for when the channel is taken off air."
+    },
+    {
+      "company": "Shopa",
+      "position": "Director of Frontend Engineering",
+      "website": "http://www.shopa.com/",
+      "startDate": "2014-05-01",
+      "endDate": "2015-04-16",
+      "summary": "Led the frontend development of the social shopping platform built on Ruby/Rails, joining the founding team and staying with the company as it grew to 20+ employees."
+    },
+    {
+      "company": "Shopa",
+      "position": "Frontend Developer",
+      "website": "http://www.shopa.com/",
+      "startDate": "2014-01-01",
+      "endDate": "2014-05-01",
+      "summary": "Developed the frontend for the social shopping marketplace MVP."
+    },
+    {
+      "company": "Universal Music Group",
+      "position": "Frontend Developer",
+      "website": "http://www.universalmusic.com/",
+      "startDate": "2011-12-12",
+      "endDate": "2014-01-01",
+      "summary": "Developed artist and label websites as well as launching the new classical music online magazine Sinfini Music."
+    },
+    {
+      "company": "BBC Worldwide",
+      "position": "Commercial Developer",
+      "website": "http://www.bbc.com/",
+      "startDate": "2010-10-01",
+      "endDate": "2011-12-01",
+      "summary": "Worked alongside the BBC.com development team to deliver the BBC website to international users."
+    },
+    {
+      "company": "BBC Worldwide",
+      "position": "User Interface Developer",
+      "website": "http://www.bbc.co.uk/",
+      "startDate": "2009-07-01",
+      "endDate": "2010-10-01",
+      "summary": "Maintained the BBC \"passion sites\" including BBC Good Food, Gardeners' World and Radio Times, and rebuilt the Top Gear website."
+    },
+    {
+      "company": "BBC",
+      "position": "Frontend Developer",
+      "website": "http://www.bbc.co.uk/",
+      "startDate": "2008-07-01",
+      "endDate": "2009-07-01",
+      "summary": "Worked with BBC Public Service delivering a customisable BBC homepage for domestic users."
+    },
+    {
+      "company": "Alec Rust Ltd",
+      "position": "Freelance Developer/Designer",
+      "website": "http://www.alecrust.com/",
+      "startDate": "2003-01-01",
+      "endDate": "2009-06-01",
+      "summary": "Assisted small businesses and startups get off the ground with a basic web presence or frontend for their idea."
+    },
+    {
+      "company": "RAPP",
+      "position": "Web Developer",
+      "website": "http://www.rapp.com/",
+      "startDate": "2007-10-01",
+      "endDate": "2008-06-01",
+      "summary": "Developed websites and emails for RAPP's clients including Apple, Disney, Unicef, Pfizer and Barclays."
+    }
+  ]
+}
