@@ -179,8 +179,6 @@ textarea {
   font: inherit
 }
 
-/* Theme base */
-
 * {
   box-sizing: border-box
 }
@@ -197,7 +195,7 @@ html {
 body {
   margin: 0 0 80px;
   background-color: #fff;
-  color: #333;
+  color: #373737;
   font-size: 14px;
   font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
   line-height: 1.42857143
@@ -209,7 +207,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: #f1c40f;
+  color: #373737;
   text-decoration: none
 }
 
@@ -257,7 +255,6 @@ h4 {
 }
 
 h4 span:first-child {
-  color: #000;
   font-weight: bold
 }
 
@@ -268,7 +265,7 @@ h4 span:first-child {
 }
 
 section {
-  margin-top: 30px
+  margin-top: 40px
 }
 
 ul,
@@ -349,22 +346,6 @@ em {
   }
 }
 
-/* Container */
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 30px
-  /* padding-right: 15px Bootstrap 3.2.0 original */
-  /* padding-left: 15px Bootstrap 3.2.0 original */
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 750px
-  }
-}
-
 /* Bootstrap grid overrides */
 
 .col-sm-6 {
@@ -383,47 +364,6 @@ em {
   .col-sm-6:last-child {
     margin-bottom: 0
   }
-}
-
-/* Utilities */
-
-.visuallyhidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  border: 0
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  position: static;
-  overflow: visible;
-  clip: auto;
-  margin: 0;
-  width: auto;
-  height: auto
-}
-
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: " "
-}
-
-.clearfix:after {
-  clear: both
-}
-
-.pull-right {
-  float: right !important
-}
-
-.pull-left {
-  float: left !important
 }
 
 /* Bootstrap grid */
@@ -1278,20 +1218,104 @@ em {
   }
 }
 
-#header {
+#profiles .network {
+  text-transform: capitalize
+}
+
+#work .position,
+#volunteer .position {
+  margin-bottom: 8px;
+  font-weight: bold
+}
+
+#education .area {
+  font-weight: bold
+}
+
+#education .area:before {
+  margin-right: 6px;
+  content: "\f0d7";
+  font: 16px Octicons
+}
+
+#education .studyType {
+  margin-left: 25px
+}
+
+#awards .summary,
+#publications .summary {
+  margin-top: 8px
+}
+
+#publications .website a:before {
+  content: attr(href)
+}
+
+@media (max-width: 768px) {
+  #publications .website a:before {
+    content: "View publication"
+  }
+}
+
+@media (max-width: 480px) {
+  #actions {
+    display: none
+  }
+}
+
+/* Container */
+
+.Container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 30px
+  /* padding-right: 15px Bootstrap 3.2.0 original */
+  /* padding-left: 15px Bootstrap 3.2.0 original */
+}
+
+@media (min-width: 768px) {
+  .Container {
+    width: 750px
+  }
+}
+
+#content h3 {
+  margin-top: -4px;
+  font-size: 26px
+}
+
+#content aside {
+  padding-right: 30px;
+  text-align: right
+}
+
+@media (max-width: 768px) {
+  #content aside {
+    margin-bottom: 20px;
+    padding-right: 0;
+    text-align: left
+  }
+}
+
+.Header {
   margin-bottom: 30px;
   padding: 50px 0;
   border-bottom: 1px solid #dfdfdf;
-  background-color: #f4f6f6
+  background-color: #f4f6f6;
+  text-align: center
 }
 
-#header h2 {
+.Header-name {
+  font-weight: bold
+}
+
+.Header-label {
   color: #95a5a6;
   font-size: 24px
 }
 
 @media (max-width: 480px) {
-  #header {
+  .Header {
     margin-bottom: 10px;
     padding: 40px 0
   }
@@ -1360,70 +1384,6 @@ em {
   }
 }
 
-#content h3 {
-  margin-top: -4px;
-  color: #f1c40f;
-  font-size: 26px
-}
-
-#content aside {
-  padding-right: 30px;
-  text-align: right
-}
-
-@media (max-width: 768px) {
-  #content aside {
-    margin-bottom: 20px;
-    padding-right: 0;
-    text-align: left
-  }
-}
-
-#profiles .network {
-  text-transform: capitalize
-}
-
-#work .position,
-#volunteer .position {
-  margin-bottom: 8px;
-  font-weight: bold
-}
-
-#education .area {
-  font-weight: bold
-}
-
-#education .area:before {
-  margin-right: 6px;
-  content: "\f0d7";
-  font: 16px Octicons
-}
-
-#education .studyType {
-  margin-left: 25px
-}
-
-#awards .summary,
-#publications .summary {
-  margin-top: 8px
-}
-
-#publications .website a:before {
-  content: attr(href)
-}
-
-@media (max-width: 768px) {
-  #publications .website a:before {
-    content: "View publication"
-  }
-}
-
-@media (max-width: 480px) {
-  #actions {
-    display: none
-  }
-}
-
 @media (min-width: 480px) {
   .strike-through {
     position: relative;
@@ -1460,4 +1420,43 @@ em {
   .strike-through span {
     display: block
   }
+}
+
+.u-hiddenVisually {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0
+}
+
+.u-hiddenVisually.focusable:active,
+.u-hiddenVisually.focusable:focus {
+  position: static;
+  overflow: visible;
+  clip: auto;
+  margin: 0;
+  width: auto;
+  height: auto
+}
+
+.u-cf:before,
+.u-cf:after {
+  display: table;
+  content: " "
+}
+
+.u-cf:after {
+  clear: both
+}
+
+.u-floatRight {
+  float: right !important
+}
+
+.u-floatLeft {
+  float: left !important
 }
