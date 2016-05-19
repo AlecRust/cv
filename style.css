@@ -1310,8 +1310,35 @@ em {
   border-right: 1px solid #dfdfdf
 }
 
-.Menu-item:last-child {
+.Menu-item:nth-child(3) {
   border-right: 0
+}
+
+.Menu-item--main {
+  clear: left;
+  width: 100%;
+  border-top: 1px solid #dfdfdf;
+  border-right: 0
+}
+
+.Menu-item--main .Menu-link {
+  font-weight: bold
+}
+
+@media (min-width: 768px) {
+  .Menu-item {
+    width: 25%
+  }
+
+  .Menu-item:nth-child(3) {
+    border-right: 1px solid #dfdfdf
+  }
+
+  .Menu-item--main {
+    clear: none;
+    border-top: 0;
+    border-right: 0
+  }
 }
 
 .Menu-link {
