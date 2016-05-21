@@ -1311,7 +1311,8 @@ em {
 
 .Header-label {
   color: #95a5a6;
-  font-size: 24px
+  font-size: 24px;
+  margin-bottom: 0
 }
 
 @media (max-width: 480px) {

@@ -38,7 +38,7 @@
       "summary": "The BBC wanted a modern stream/magazine style web application to replace the BBC Three TV channel. I worked with a small team to deliver this Node.js/React project and satisfy the business, editorial, design and analytics requirements.",
       "highlights": [
         "User testing of target audience and development of fun website features",
-        "Developing an internal library for displaying \"cards\" of BBC content",
+        "Developing an internal library for displaying “cards” of BBC content",
         "Learning new technologies such as Node, React, Webpack and Babel"
       ]
     },
@@ -78,7 +78,7 @@
       "highlights": [
         "Leading the frontend on the new classical music site Sinfini Music",
         "Launching new mobile-first website for Mercury Records music label",
-        "Developing the \"UMG Boilerplate\" to help teams quickly build applications"
+        "Developing the “UMG Boilerplate” to help teams quickly build applications"
       ]
     },
     {
@@ -100,7 +100,7 @@
       "website": "https://www.bbc.co.uk/",
       "startDate": "2009-07-01",
       "endDate": "2010-10-01",
-      "summary": "Working in the Digital Delivery team I maintained the \"passion sites\" such as BBC Good Food, Gardeners' World and Radio Times. I had fun working with multiple different code bases and solving problems in a consistent way across the network of websites.",
+      "summary": "Working in the Digital Delivery team I maintained the “passion sites” such as BBC Good Food, Gardeners' World and Radio Times. I had fun working with multiple different code bases and solving problems in a consistent way across the network of websites.",
       "highlights": [
         "Rebuilding the UK version of the Top Gear website",
         "Developing fun new features for the BBC websites",
@@ -144,6 +144,58 @@
         "Building HTML emails for clients such as Apple, Barclays, Crisis",
         "Launching health information website for Pfizer",
         "Learning about target audience through formal user testing"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Development Skills",
+      "keywords": [
+        "Modern HTML, CSS, JavaScript",
+        "Progressive Enhancement",
+        "Mobile-first/responsive",
+        "Accessibility, performance, SEO"
+      ]
+    },
+    {
+      "name": "Other Skills",
+      "keywords": [
+        "Agile, Waterfall, TDD, BDD",
+        "Unit/integration testing",
+        "Cross-browser testing",
+        "Continuous int/deployment"
+      ]
+    },
+    {
+      "name": "Tools/Technologies",
+      "keywords": [
+        "Node.js, React, Webpack, Babel",
+        "PostCSS, Sass, LESS, Stylus",
+        "Adobe Photoshop/Illustrator",
+        "Affinity Photo/Designer",
+        "Git, SVN, Mercurial, Kiln, GitHub",
+        "Ruby on Rails, Heroku, OpenShift",
+        "Grunt, Gulp and NPM scripts",
+        "jQuery, WordPress, Umbraco, MySQL",
+        "TeamCity, Hudson, CircleCI, Jenkins"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Outdoors",
+      "keywords": [
+        "Cycling",
+        "Sailing",
+        "Snowboarding"
+      ]
+    },
+    {
+      "name": "Indoors",
+      "keywords": [
+        "Personal projects",
+        "Music",
+        "Politics"
       ]
     }
   ]
