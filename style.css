@@ -299,21 +299,6 @@ dd {
   margin-left: 0
 }
 
-#content li {
-  list-style: none;
-  line-height: 1.8
-}
-
-#content li:before {
-  position: absolute;
-  float: left;
-  margin-top: 6px;
-  margin-left: -20px;
-  content: "\f052";
-  font: 13px Octicons;
-  opacity: .1
-}
-
 abbr[title],
 abbr[data-original-title] {
   border-bottom: 1px dotted #777;
@@ -1232,14 +1217,8 @@ em {
   font-weight: bold
 }
 
-#education .area:before {
-  margin-right: 6px;
-  content: "\f0d7";
-  font: 16px Octicons
-}
-
 #education .studyType {
-  margin-left: 25px
+  font-style: italic
 }
 
 #awards .summary,
@@ -1263,6 +1242,10 @@ em {
   }
 }
 
+.Avatar-image {
+  border-radius: 140px
+}
+
 /* Container */
 
 .Container {
@@ -1282,6 +1265,18 @@ em {
 #content h3 {
   margin-top: -4px;
   font-size: 26px
+}
+
+#content li {
+  list-style: none;
+  text-indent: -15px;
+}
+
+#content li:before {
+  color: #2ec239;
+  content: '\2022\00a0\00a0';
+  vertical-align: middle;
+  font-size: 20px
 }
 
 #content aside {
@@ -1310,9 +1305,9 @@ em {
 }
 
 .Header-label {
+  margin-bottom: 0;
   color: #95a5a6;
-  font-size: 24px;
-  margin-bottom: 0
+  font-size: 24px
 }
 
 @media (max-width: 480px) {
