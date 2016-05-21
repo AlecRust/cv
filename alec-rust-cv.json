@@ -5,7 +5,7 @@
     "picture": "",
     "email": "me@alecrust.com",
     "website": "http://www.alecrust.com",
-    "summary": "Experienced frontend developer with a passion for accessibility, performance, SEO and meticulously crafted mobile-first user interfaces. 13 years web development experience, 9 of which in London working for large corporations and startups.",
+    "summary": "Experienced frontend web developer with a passion for accessibility, performance, SEO and meticulously crafted mobile-first user interfaces. 13 years development experience, 9 of which in London working for large corporations and startups.",
     "location": {
       "city": "London",
       "countryCode": "UK"
@@ -35,23 +35,38 @@
       "website": "http://www.bbc.co.uk/bbcthree",
       "startDate": "2015-06-01",
       "endDate": "2016-06-30",
-      "summary": "Currently working to deliver the new BBC Three website with React/Node for when the channel is taken off air."
+      "summary": "The BBC wanted a modern stream/magazine style web application to replace the BBC Three TV channel. I worked with a small team to deliver this Node.js/React project and satisfy the business, editorial, design and analytics requirements.",
+      "highlights": [
+        "User testing of target audience and development of fun website features",
+        "Developing an internal library for displaying \"cards\" of BBC content",
+        "Learning new technologies such as Node, React, Webpack and Babel"
+      ]
     },
     {
       "company": "Shopa",
       "position": "Director of Frontend Engineering",
-      "website": "http://www.shopa.com/",
+      "website": "https://shopa.com/",
       "startDate": "2014-05-01",
       "endDate": "2015-04-16",
-      "summary": "Led the frontend development of the social shopping platform built on Ruby/Rails, joining the founding team and staying with the company as it grew to 20+ employees."
+      "summary": "In this permanent role I led the frontend development of the company as the team grew to over 20 employees and received further investment. Over this time we improved the technology stack to scale with the company.",
+      "highlights": [
+        "Maintaining the website end-to-end and trying various dev ops tools",
+        "Managing business expectations in combination with technical limitations",
+        "Learning about technologies such as Go, Elasticsearch and Gulp"
+      ]
     },
     {
       "company": "Shopa",
       "position": "Frontend Developer",
-      "website": "http://www.shopa.com/",
+      "website": "https://shopa.com/",
       "startDate": "2014-01-01",
       "endDate": "2014-05-01",
-      "summary": "Developed the frontend for the social shopping marketplace MVP."
+      "summary": "I joined the new social shopping start-up Shopa to help build their early web and mobile app offering. The company received investment and I took a permanent position to help build the team and manage the frontend.",
+      "highlights": [
+        "Iterating on new prototypes and ideas with a fast feedback loop",
+        "Experimenting with new technologies in a fun relaxed environment",
+        "Learning Ruby on Rails and using new methodologies such as SUIT CSS"
+      ]
     },
     {
       "company": "Universal Music Group",
@@ -59,7 +74,12 @@
       "website": "http://www.universalmusic.com/",
       "startDate": "2011-12-12",
       "endDate": "2014-01-01",
-      "summary": "Developed artist and label websites as well as launching the new classical music online magazine Sinfini Music."
+      "summary": "Working with Universal Music I was able to work on many different artist and record label websites and get familiar with the Umbraco CMS. I provided presentations on mobile-first best practices and helped develop tools and best practices for the team.",
+      "highlights": [
+        "Leading the frontend on the new classical music site Sinfini Music",
+        "Launching new mobile-first website for Mercury Records music label",
+        "Developing the \"UMG Boilerplate\" to help teams quickly build applications"
+      ]
     },
     {
       "company": "BBC Worldwide",
@@ -67,23 +87,38 @@
       "website": "http://www.bbc.com/",
       "startDate": "2010-10-01",
       "endDate": "2011-12-01",
-      "summary": "Worked alongside the BBC.com development team to deliver the BBC website to international users."
+      "summary": "I joined the BBC.com development team to help launch and maintain a new version of the site for international users. My role also had a focus on managing analytics requirement and advertising code for the site, which often required challenging technical solutions.",
+      "highlights": [
+        "Completing Adobe SiteCatalyst training course",
+        "Analysing traffic from around the world using Keynote",
+        "Learning about continuous integration, TDD and BDD"
+      ]
     },
     {
       "company": "BBC Worldwide",
       "position": "User Interface Developer",
-      "website": "http://www.bbc.co.uk/",
+      "website": "https://www.bbc.co.uk/",
       "startDate": "2009-07-01",
       "endDate": "2010-10-01",
-      "summary": "Maintained the BBC \"passion sites\" including BBC Good Food, Gardeners' World and Radio Times, and rebuilt the Top Gear website."
+      "summary": "Working in the Digital Delivery team I maintained the \"passion sites\" such as BBC Good Food, Gardeners' World and Radio Times. I had fun working with multiple different code bases and solving problems in a consistent way across the network of websites.",
+      "highlights": [
+        "Rebuilding the UK version of the Top Gear website",
+        "Developing fun new features for the BBC websites",
+        "Learning about website localisation and GeoIP technologies"
+      ]
     },
     {
       "company": "BBC",
       "position": "Frontend Developer",
-      "website": "http://www.bbc.co.uk/",
+      "website": "https://www.bbc.co.uk/",
       "startDate": "2008-07-01",
       "endDate": "2009-07-01",
-      "summary": "Worked with BBC Public Service delivering a customisable BBC homepage for domestic users."
+      "summary": "I was fortunate enough to be selected for the development team which built the customisable widget-based BBC homepage for domestic users. I worked with BBC Public Service for this project before moving to BBC Worldwide, the commercial arm of the BBC.",
+      "highlights": [
+        "Building a high profile website visited by millions of users",
+        "Honing software development best practices in a team environment",
+        "Learning about dev ops of a large site such as CDNs, caching layers etc."
+      ]
     },
     {
       "company": "Alec Rust Ltd",
@@ -91,7 +126,12 @@
       "website": "http://www.alecrust.com/",
       "startDate": "2003-01-01",
       "endDate": "2009-06-01",
-      "summary": "Assisted small businesses and startups get off the ground with a basic web presence or frontend for their idea."
+      "summary": "As a freelancer I had the opportunity to learn about all aspects of web development from design to databases and security. I delivered work for small businesses with software such as WordPress, Drupal and Magento as well as bespoke applications or user interfaces for start-ups.",
+      "highlights": [
+        "Exposure to a wide range of different businesses and requirements",
+        "Developing a scalable solution for hosting and monitoring many websites",
+        "Launching a question/answer platform for general contractors"
+      ]
     },
     {
       "company": "RAPP",
@@ -99,7 +139,12 @@
       "website": "http://www.rapp.com/",
       "startDate": "2007-10-01",
       "endDate": "2008-06-01",
-      "summary": "Developed websites and emails for RAPP's clients including Apple, Disney, Unicef, Pfizer and Barclays."
+      "summary": "Working in the technology department for a large agency taught me about good development workflows for large teams and managing deadline expectations. We used technologies such as Microsoft SourceSafe and had an extesive QA process for our work.",
+      "highlights": [
+        "Building HTML emails for clients such as Apple, Barclays, Crisis",
+        "Launching health information website for Pfizer",
+        "Learning about target audience through formal user testing"
+      ]
     }
   ]
 }
