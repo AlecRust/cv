@@ -1242,8 +1242,21 @@ em {
   }
 }
 
+.Avatar {
+  margin-bottom: 10px
+}
+
 .Avatar-image {
-  border-radius: 140px
+  border-radius: 50%;
+  width: 100px;
+  height: 100px
+}
+
+@media (min-width: 768px) {
+  .Avatar-image {
+    width: 140px;
+    height: 140px
+  }
 }
 
 /* Container */
