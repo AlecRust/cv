@@ -383,7 +383,7 @@ body {
   line-height: 1.4
 }
 a {
-  color: #2ec239;
+  color: #5ca019;
   text-decoration: none
 }
 a:focus, a:hover {
@@ -1368,7 +1368,7 @@ em {
   text-indent: -15px;
 }
 #content li:before {
-  color: #2ec239;
+  color: #5ca019;
   content: '\2022\00a0\00a0';
   vertical-align: middle;
   font-size: 20px
