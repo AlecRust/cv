@@ -2,9 +2,9 @@
   "basics": {
     "name": "Alec Rust",
     "label": "Frontend Developer",
-    "picture": "http://cv.alecrust.com/alec-rust.jpg",
+    "picture": "https://cv.alecrust.com/alec-rust.jpg",
     "email": "me@alecrust.com",
-    "website": "http://www.alecrust.com",
+    "website": "https://www.alecrust.com",
     "summary": "Experienced frontend web developer with a passion for accessibility, performance, SEO and meticulously crafted mobile-first user interfaces. 13 years development experience, 9 of which in London working for large corporations and startups.",
     "location": {
       "city": "London",
@@ -123,7 +123,7 @@
     {
       "company": "Alec Rust Ltd",
       "position": "Freelance Developer/Designer",
-      "website": "http://www.alecrust.com/",
+      "website": "https://www.alecrust.com/",
       "startDate": "Jan 2003",
       "endDate": "Jun 2009",
       "summary": "As a freelancer I had the opportunity to learn about all aspects of web development from design to databases and security. I delivered work for small businesses with software such as WordPress, Drupal and Magento as well as bespoke applications or user interfaces for start-ups.",
