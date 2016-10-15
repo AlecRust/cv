@@ -1364,7 +1364,7 @@ em {
 }
 #content li {
   list-style: none;
-  text-indent: -15px;;
+  text-indent: -15px;
 }
 #content li:before {
   color: #5ca019;
