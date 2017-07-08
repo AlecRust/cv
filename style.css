@@ -1,20 +1,18 @@
-/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
-
-/**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
 
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
 html {
-  font-family: sans-serif; /* 1 */
-  line-height: 1.15; /* 2 */
-  -ms-text-size-adjust: 100%; /* 3 */
-  -webkit-text-size-adjust: 100%; /* 3 */
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -79,7 +77,8 @@ figure {
  */
 
 hr {
-  box-sizing: content-box; /* 1 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
@@ -108,24 +107,15 @@ a {
 }
 
 /**
- * Remove the outline on focused links when they are also active or hovered
- * in all browsers (opinionated).
- */
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
-/**
- * 1. Remove the bottom border in Firefox 39-.
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -317,13 +307,11 @@ button:-moz-focusring,
 }
 
 /**
- * Change the border, margin, and padding in all browsers (opinionated).
+ * Correct the padding in Firefox.
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -334,7 +322,8 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
@@ -367,7 +356,8 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
 
@@ -465,13 +455,15 @@ template {
 /* Breakpoints */
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -1510,7 +1502,7 @@ em {
 
 @media (max-width: 768px) {
 
-  #publications .website a:before {
+#publications .website a:before {
     content: "View publication";
   }
 }
@@ -1533,7 +1525,7 @@ em {
 
 @media (min-width: 768px) {
 
-  .Avatar-image {
+.Avatar-image {
     width: 140px;
     height: 140px;
   }
@@ -1549,7 +1541,7 @@ em {
 
 @media (min-width: 768px) {
 
-  .Container {
+.Container {
     width: 750px;
   }
 }
@@ -1561,7 +1553,7 @@ em {
 
 @media (min-width: 768px) {
 
-  #content h3 {
+#content h3 {
     font-size: 24px;
   }
 }
@@ -1585,7 +1577,7 @@ em {
 
 @media (max-width: 768px) {
 
-  #content aside {
+#content aside {
     margin-bottom: 20px;
     padding-right: 0;
     text-align: left;
@@ -1601,7 +1593,7 @@ em {
 
 @media (min-width: 768px) {
 
-  .Header {
+.Header {
     margin-bottom: 30px;
     padding: 50px 0;
   }
@@ -1626,7 +1618,7 @@ em {
 
 @media (min-width: 480px) {
 
-  .Header-label {
+.Header-label {
     font-size: 22px;
   }
 }
