@@ -30,6 +30,13 @@
   },
   "work": [
     {
+      "company": "Featurist",
+      "position": "Head of UI/UX",
+      "website": "https://www.featurist.co.uk/",
+      "startDate": "2016-07-04",
+      "summary": "I'm currently working with a London-based agency building websites and applications for a wide range of clients."
+    },
+    {
       "company": "BBC",
       "position": "Senior Web Developer",
       "website": "http://www.bbc.co.uk/bbcthree",
