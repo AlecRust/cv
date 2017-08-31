@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Alec Rust",
-    "label": "Frontend Developer",
+    "label": "Front End Developer",
     "picture": "https://cv.alecrust.com/alec-rust.jpg",
     "email": "me@alecrust.com",
     "website": "https://www.alecrust.com",
-    "summary": "Experienced frontend web developer with a passion for accessibility, performance, SEO and meticulously crafted mobile-first user interfaces. 13 years development experience, 9 of which in London working for large corporations and startups.",
+    "summary": "Experienced front end web developer with a passion for accessibility, performance, SEO and meticulously crafted mobile-first user interfaces. 13 years development experience, 9 of which in London working for large corporations and startups.",
     "location": {
       "city": "London",
       "countryCode": "UK"
@@ -51,11 +51,11 @@
     },
     {
       "company": "Shopa",
-      "position": "Director of Frontend Engineering",
+      "position": "Director of Front End Engineering",
       "website": "https://shopa.com/",
       "startDate": "2014-05-01",
       "endDate": "2015-04-16",
-      "summary": "In this permanent role I led the frontend development of the company as the team grew to over 20 employees and received further investment. Over this time we improved the technology stack to scale with the company.",
+      "summary": "In this permanent role I led the front end development of the company as the team grew to over 20 employees and received further investment. Over this time we improved the technology stack to scale with the company.",
       "highlights": [
         "Maintaining the website end-to-end and trying various dev ops tools",
         "Managing business expectations in combination with technical limitations",
@@ -64,11 +64,11 @@
     },
     {
       "company": "Shopa",
-      "position": "Frontend Developer",
+      "position": "Front End Developer",
       "website": "https://shopa.com/",
       "startDate": "2014-01-13",
       "endDate": "2014-05-01",
-      "summary": "I joined the new social shopping start-up Shopa to help build their early web and mobile app offering. The company received investment and I took a permanent position to help build the team and manage the frontend.",
+      "summary": "I joined the new social shopping start-up Shopa to help build their early web and mobile app offering. The company received investment and I took a permanent position to help build the team and manage the front end.",
       "highlights": [
         "Iterating on new prototypes and ideas with a fast feedback loop",
         "Experimenting with new technologies in a friendly relaxed environment",
@@ -77,13 +77,13 @@
     },
     {
       "company": "Universal Music Group",
-      "position": "Frontend Developer",
+      "position": "Front End Developer",
       "website": "http://www.universalmusic.com/",
       "startDate": "2011-12-12",
       "endDate": "2014-01-10",
       "summary": "Working with Universal Music I was able to work on many different artist and record label websites and get familiar with the Umbraco CMS. I provided presentations on mobile-first best practices and helped develop tools and best practices for the team.",
       "highlights": [
-        "Leading the frontend on the new classical music site Sinfini Music",
+        "Leading the front end on the new classical music site Sinfini Music",
         "Launching new mobile-first website for Mercury Records music label",
         "Developing the “UMG Boilerplate” to help teams quickly build applications"
       ]
@@ -116,7 +116,7 @@
     },
     {
       "company": "BBC",
-      "position": "Frontend Developer",
+      "position": "Front End Developer",
       "website": "https://www.bbc.co.uk/",
       "startDate": "2008-07-01",
       "endDate": "2009-07-01",
