@@ -30,6 +30,12 @@
   },
   "work": [
     {
+      "company": "GetHarley",
+      "position": "Senior Frontend Engineer",
+      "website": "https://www.getharley.com/",
+      "startDate": "2023-11-13"
+    },
+    {
       "company": "Featurist",
       "position": "Head of UI/UX",
       "website": "https://featurist.co.uk/",
