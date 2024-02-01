@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "enabledManagers": ["npm", "github-actions"],
+  "extends": [
+    "config:recommended",
+    "group:allNonMajor",
+    ":automergeMinor",
+    ":disableDependencyDashboard"
+  ],
+  "rangeStrategy": "bump"
+}
