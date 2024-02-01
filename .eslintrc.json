@@ -4,7 +4,9 @@
     "ecmaVersion": "latest"
   },
   "env": {
+    "commonjs": true,
     "node": true,
-    "commonjs": true
+    "browser": true,
+    "jest": true
   }
 }

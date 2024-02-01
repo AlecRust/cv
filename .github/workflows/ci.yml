@@ -11,10 +11,6 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   lint:
     name: Lint
@@ -25,12 +21,37 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "latest"
+          node-version: "lts/*"
           cache: "npm"
       - name: Install Node packages
         run: npm ci
       - name: Run lint
         run: npm run lint
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: "npm"
+      - name: Install Node packages
+        run: npm ci
+      - name: Build site
+        run: npm run build
+      - name: Run tests
+        run: npm test
+      - name: Upload artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: diff-images
+          path: |
+            test/__image_snapshots__/__diff_output__/*
 
   validate-schema:
     name: Validate schema
@@ -41,12 +62,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "latest"
+          node-version: "lts/*"
           cache: "npm"
       - name: Install Node packages
         run: npm ci
       - name: Run validate-schema
-        run: npm test
+        run: npm run validate-schema
 
   check-spelling:
     name: Check spelling
@@ -57,7 +78,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "latest"
+          node-version: "lts/*"
           cache: "npm"
       - name: Install Node packages
         run: npm ci
@@ -66,7 +87,7 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/main'
-    needs: [lint, validate-schema, check-spelling]
+    needs: [lint, test, validate-schema, check-spelling]
     name: Deploy
     runs-on: ubuntu-latest
     environment:
@@ -78,11 +99,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "latest"
+          node-version: "lts/*"
           cache: "npm"
       - name: Install Node packages
         run: npm ci
-      - name: Build assets
+      - name: Build site
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
