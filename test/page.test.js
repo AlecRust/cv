@@ -29,6 +29,12 @@ describe('Page Tests', () => {
     })
   })
 
+  test('dates are formatted correctly', async () => {
+    const pageText = await page.evaluate(() => document.body.textContent)
+    const normalizedDateText = pageText.replace(/\s+/g, ' ').trim()
+    expect(normalizedDateText).toContain('4th Jul 2016 - 30th Jun 2023')
+  })
+
   test('"View as PDF" link loads PDF', async () => {
     await page.click('a[href="alec-rust-cv.pdf"]')
     const contentType = await page.evaluate(() => document.contentType)
