@@ -54,7 +54,7 @@ async function buildStyles() {
 
 async function buildPdf() {
   try {
-    const browser = await puppeteer.launch({ headless: 'new' })
+    const browser = await puppeteer.launch({ headless: true })
     const page = await browser.newPage()
     await page.goto(`file://${__dirname}/public/index.html`, {
       waitUntil: 'networkidle0',

@@ -6,7 +6,7 @@ describe('Page Tests', () => {
   let page
 
   beforeAll(async () => {
-    browser = await puppeteer.launch({ headless: 'new' })
+    browser = await puppeteer.launch({ headless: true })
     page = await browser.newPage()
   })
 
