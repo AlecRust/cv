@@ -51,7 +51,7 @@ jobs:
         with:
           name: diff-images
           path: |
-            test/__image_snapshots__/__diff_output__/*
+            __tests__/__image_snapshots__/*
 
   validate-schema:
     name: Validate schema
