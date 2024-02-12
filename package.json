@@ -22,7 +22,7 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "chokidar": "^3.5.3",
+    "chokidar": "^3.6.0",
     "cspell": "^8.3.2",
     "cssnano": "^6.0.3",
     "eslint": "^8.56.0",
@@ -32,8 +32,8 @@
     "husky": "^9.0.10",
     "jest": "^29.7.0",
     "jest-image-snapshot": "^6.4.0",
-    "lint-staged": "^15.2.1",
-    "postcss": "^8.4.33",
+    "lint-staged": "^15.2.2",
+    "postcss": "^8.4.35",
     "postcss-import": "^16.0.0",
     "postcss-preset-env": "^9.3.0",
     "prettier": "^3.2.5",
