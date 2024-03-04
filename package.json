@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "chokidar": "^3.6.0",
-    "cspell": "^8.4.1",
+    "cspell": "^8.5.0",
     "cssnano": "^6.0.5",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
@@ -37,7 +37,7 @@
     "postcss-import": "^16.0.1",
     "postcss-preset-env": "^9.4.0",
     "prettier": "^3.2.5",
-    "puppeteer": "^22.2.0",
+    "puppeteer": "^22.3.0",
     "resume-cli": "^3.0.8",
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^36.0.0"
