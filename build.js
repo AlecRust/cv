@@ -4,7 +4,7 @@ const chokidar = require('chokidar')
 const { exec: execCallback } = require('child_process')
 const util = require('util')
 const exec = util.promisify(execCallback)
-const puppeteer = require('puppeteer')
+const playwright = require('playwright')
 
 async function copyPublic() {
   try {
@@ -54,10 +54,10 @@ async function buildStyles() {
 
 async function buildPdf() {
   try {
-    const browser = await puppeteer.launch({ headless: true })
+    const browser = await playwright.chromium.launch({ headless: true })
     const page = await browser.newPage()
     await page.goto(`file://${__dirname}/public/index.html`, {
-      waitUntil: 'networkidle0',
+      waitUntil: 'networkidle',
     })
     await page.pdf({
       path: 'public/alec-rust-cv.pdf',
