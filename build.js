@@ -5,6 +5,7 @@ const { exec: execCallback } = require('child_process')
 const util = require('util')
 const exec = util.promisify(execCallback)
 const playwright = require('playwright')
+const { glob } = require('glob')
 
 async function copyPublic() {
   try {
@@ -71,10 +72,10 @@ async function buildPdf() {
   }
 }
 
-function watch() {
+async function watch() {
   console.log('👀 Watching for changes...')
   chokidar
-    .watch('src/styles/**/*.css', { ignoreInitial: true })
+    .watch(await glob('src/styles/**/*.css'), { ignoreInitial: true })
     .on('all', async (event, path) => {
       console.log(`🛠️ Changes detected in ${path}`)
       await buildStyles()
@@ -96,7 +97,7 @@ async function build() {
   console.log('🎉 Build completed.')
 
   if (process.argv.includes('--watch')) {
-    watch()
+    await watch()
   } else {
     process.exit()
   }
