@@ -1,6 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test')
-const path = require('path')
+const path = require('node:path')
 
 test.describe('Tests', () => {
   test.beforeEach(async ({ page }) => {

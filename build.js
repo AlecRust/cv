@@ -1,8 +1,8 @@
 const postcss = require('postcss')
 const fs = require('fs-extra')
 const chokidar = require('chokidar')
-const { exec: execCallback } = require('child_process')
-const util = require('util')
+const { exec: execCallback } = require('node:child_process')
+const util = require('node:util')
 const exec = util.promisify(execCallback)
 const playwright = require('playwright')
 const { glob } = require('glob')
@@ -46,7 +46,7 @@ async function buildStyles() {
       to: outputPath,
     })
     await fs.outputFile(outputPath, result.css)
-    console.log(`✅ CSS built`)
+    console.log('✅ CSS built')
   } catch (error) {
     console.error('❌ Error building CSS:', error)
     process.exit(1)

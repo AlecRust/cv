@@ -7,45 +7,38 @@
     "dev": "npm run build && resume serve --resume src/resume.json --theme .",
     "build": "node build.js",
     "test": "playwright test",
-    "lint": "prettier --check . && eslint . && stylelint '**/*.css'",
-    "format": "prettier --write . && eslint --fix . && stylelint --fix '**/*.css'",
+    "lint": "biome ci . && stylelint '**/*.css'",
+    "format": "biome check --write . && stylelint --fix '**/*.css'",
     "watch": "node build.js --watch",
     "validate-schema": "cd src && resume validate",
     "spellcheck": "cspell",
     "prepare": "husky"
   },
-  "browserslist": [
-    "defaults"
-  ],
+  "browserslist": ["defaults"],
   "dependencies": {
     "date-fns": "^4.1.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.21.0",
+    "@biomejs/biome": "1.9.4",
     "@playwright/test": "^1.50.1",
     "chokidar": "^4.0.3",
     "cspell": "^8.17.5",
     "cssnano": "^7.0.6",
-    "eslint": "^9.21.0",
-    "eslint-config-prettier": "^10.0.2",
     "fs-extra": "^11.3.0",
     "glob": "^11.0.1",
-    "globals": "^16.0.0",
     "handlebars": "^4.7.8",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "postcss": "^8.5.3",
     "postcss-import": "^16.1.0",
     "postcss-preset-env": "^10.1.5",
-    "prettier": "^3.5.2",
     "resume-cli": "^3.1.2",
     "stylelint": "^16.15.0",
     "stylelint-config-standard": "^36.0.1"
   },
   "lint-staged": {
-    "*": "prettier --write --ignore-unknown",
-    "*.js": "eslint --fix",
+    "*": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true",
     "*.css": "stylelint --fix",
     "*.{md,hbs}": "cspell --no-must-find-files --no-summary --no-progress",
     "src/resume.json": "cspell --no-must-find-files --no-summary --no-progress"
