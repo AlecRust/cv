@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Alec Rust",
-    "label": "Senior Web Developer",
+    "label": "Software Engineer",
     "picture": "alec-rust.jpg",
     "email": "me@alecrust.com",
     "website": "https://www.alecrust.com/",
-    "summary": "Experienced front end developer with leadership experience. Dedicated to accessibility, performance, SEO and crafted mobile-first user interfaces.",
+    "summary": "Experienced frontend leaning software engineer with leadership experience. Dedicated to accessibility, performance, SEO and crafted mobile-first user interfaces.",
     "location": {
       "city": "London",
       "countryCode": "UK"
