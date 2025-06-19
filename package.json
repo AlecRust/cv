@@ -14,13 +14,15 @@
     "spellcheck": "cspell",
     "prepare": "husky"
   },
-  "browserslist": ["defaults"],
+  "browserslist": [
+    "defaults"
+  ],
   "dependencies": {
     "date-fns": "^4.1.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.0.0",
     "@playwright/test": "^1.52.0",
     "chokidar": "^4.0.3",
     "cspell": "^9.0.2",

@@ -76,13 +76,13 @@ async function watch() {
   console.log('👀 Watching for changes...')
   chokidar
     .watch(await glob('src/styles/**/*.css'), { ignoreInitial: true })
-    .on('all', async (event, path) => {
+    .on('all', async (_event, path) => {
       console.log(`🛠️ Changes detected in ${path}`)
       await buildStyles()
     })
   chokidar
     .watch('src/resume.json', { ignoreInitial: true })
-    .on('all', async (event, path) => {
+    .on('all', async (_event, path) => {
       console.log(`🛠️ Changes detected in ${path}`)
       await copyPublic()
     })
