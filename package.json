@@ -14,7 +14,9 @@
     "spellcheck": "cspell",
     "prepare": "husky"
   },
-  "browserslist": ["defaults"],
+  "browserslist": [
+    "defaults"
+  ],
   "dependencies": {
     "date-fns": "^4.1.0",
     "normalize.css": "^8.0.1"
