@@ -22,7 +22,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-          cache: "npm"
       - name: Install Node packages
         run: npm ci
       - name: Run lint
@@ -38,7 +37,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-          cache: "npm"
       - name: Install Node packages
         run: npm ci
       - name: Install Playwright Browsers
@@ -64,7 +62,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-          cache: "npm"
       - name: Install Node packages
         run: npm ci
       - name: Run validate-schema
@@ -80,7 +77,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-          cache: "npm"
       - name: Install Node packages
         run: npm ci
       - name: Run spellcheck
@@ -101,7 +97,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-          cache: "npm"
       - name: Install Node packages
         run: npm ci
       - name: Install Chromium
