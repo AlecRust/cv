@@ -16,10 +16,7 @@ Handlebars.registerHelper('friendlyDate', (datestamp) => {
 })
 
 async function render(resume) {
-  const tpl = await fs.readFile(
-    path.join(__dirname, 'src', 'resume.hbs'),
-    'utf-8',
-  )
+  const tpl = await fs.readFile(path.join(__dirname, 'src', 'resume.hbs'), 'utf-8')
   const compile = Handlebars.compile(tpl)
   return compile({ resume })
 }

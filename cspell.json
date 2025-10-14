@@ -2,14 +2,5 @@
   "version": "0.2",
   "language": "en-GB",
   "files": ["README.md", "src/resume.json", "src/resume.hbs"],
-  "ignoreWords": [
-    "alecrust",
-    "Featurist",
-    "Shopa",
-    "Umbraco",
-    "Sinfini",
-    "Magento",
-    "RAPP",
-    "MVPs"
-  ]
+  "ignoreWords": ["alecrust", "Featurist", "Shopa", "Umbraco", "Sinfini", "Magento", "RAPP", "MVPs"]
 }

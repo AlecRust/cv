@@ -4,9 +4,7 @@ const path = require('node:path')
 
 test.describe('Tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto(
-      `file://${path.join(__dirname, '..', '/public/index.html')}`,
-    )
+    await page.goto(`file://${path.join(__dirname, '..', '/public/index.html')}`)
   })
 
   test('renders correctly', async ({ page }) => {

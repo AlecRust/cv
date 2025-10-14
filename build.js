@@ -20,9 +20,7 @@ async function copyPublic() {
 
 async function buildHtml() {
   try {
-    await exec(
-      'npx resume export public/index.html --resume src/resume.json --theme .',
-    )
+    await exec('npx resume export public/index.html --resume src/resume.json --theme .')
     console.log('✅ HTML built')
   } catch (error) {
     console.error('❌ Error building HTML:', error)
@@ -74,18 +72,14 @@ async function buildPdf() {
 
 async function watch() {
   console.log('👀 Watching for changes...')
-  chokidar
-    .watch(await glob('src/styles/**/*.css'), { ignoreInitial: true })
-    .on('all', async (_event, path) => {
-      console.log(`🛠️ Changes detected in ${path}`)
-      await buildStyles()
-    })
-  chokidar
-    .watch('src/resume.json', { ignoreInitial: true })
-    .on('all', async (_event, path) => {
-      console.log(`🛠️ Changes detected in ${path}`)
-      await copyPublic()
-    })
+  chokidar.watch(await glob('src/styles/**/*.css'), { ignoreInitial: true }).on('all', async (_event, path) => {
+    console.log(`🛠️ Changes detected in ${path}`)
+    await buildStyles()
+  })
+  chokidar.watch('src/resume.json', { ignoreInitial: true }).on('all', async (_event, path) => {
+    console.log(`🛠️ Changes detected in ${path}`)
+    await copyPublic()
+  })
 }
 
 async function build() {
