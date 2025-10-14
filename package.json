@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "author": "Alec Rust (https://www.alecrust.com/)",
+  "packageManager": "npm@11.6.2",
   "scripts": {
     "dev": "npm run build && resume serve --resume src/resume.json --theme .",
     "build": "node build.js",
