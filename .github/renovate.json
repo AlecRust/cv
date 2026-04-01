@@ -4,6 +4,7 @@
     "config:recommended",
     "schedule:monthly",
     "group:allNonMajor",
+    "customManagers:biomeVersions",
     ":automergeMinor",
     ":maintainLockFilesMonthly",
     ":disableDependencyDashboard"
