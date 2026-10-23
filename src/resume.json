@@ -1,16 +1,21 @@
 {
   "basics": {
     "name": "Alec Rust",
-    "label": "Software Engineer",
+    "label": "Head of Engineering",
     "picture": "alec-rust.jpg",
     "email": "me@alecrust.com",
     "website": "https://www.alecrust.com/",
-    "summary": "Experienced frontend leaning software engineer with leadership experience. Dedicated to accessibility, performance, SEO and crafted mobile-first user interfaces.",
+    "summary": "Experienced software engineer and technical leader. Dedicated to accessibility, performance, SEO and crafted mobile-first user interfaces.",
     "location": {
       "city": "London",
       "countryCode": "UK"
     },
     "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "alecrust",
+        "url": "https://www.linkedin.com/in/alecrust/"
+      },
       {
         "network": "GitHub",
         "username": "AlecRust",
@@ -20,20 +25,22 @@
         "network": "Twitter",
         "username": "AlecRust",
         "url": "https://twitter.com/AlecRust"
-      },
-      {
-        "network": "LinkedIn",
-        "username": "alecrust",
-        "url": "https://www.linkedin.com/in/alecrust/"
       }
     ]
   },
   "work": [
     {
       "company": "GetHarley",
+      "position": "Head of Engineering",
+      "website": "https://www.getharley.com/",
+      "startDate": "2026-09-22"
+    },
+    {
+      "company": "GetHarley",
       "position": "Senior Frontend Engineer",
       "website": "https://www.getharley.com/",
-      "startDate": "2023-11-13"
+      "startDate": "2023-11-13",
+      "endDate": "2026-09-22"
     },
     {
       "company": "Featurist",

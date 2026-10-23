@@ -1,10 +1,9 @@
 const postcss = require('postcss')
 const fs = require('fs-extra')
-const chokidar = require('chokidar')
 const { exec: execCallback } = require('node:child_process')
 const util = require('node:util')
 const exec = util.promisify(execCallback)
-const playwright = require('playwright')
+const { chromium } = require('@playwright/test')
 const { glob } = require('glob')
 
 async function copyPublic() {
@@ -33,12 +32,14 @@ async function buildStyles() {
     const inputPath = 'src/styles/style.css'
     const outputPath = 'public/style.min.css'
     const css = await fs.readFile(inputPath, 'utf8')
+    const { default: postcssPresetEnv } = await import('postcss-preset-env')
+    const { default: cssnano } = await import('cssnano')
     const result = await postcss([
       require('postcss-import'),
-      require('postcss-preset-env')({
+      postcssPresetEnv({
         stage: 0,
       }),
-      require('cssnano'),
+      cssnano(),
     ]).process(css, {
       from: inputPath,
       to: outputPath,
@@ -53,7 +54,7 @@ async function buildStyles() {
 
 async function buildPdf() {
   try {
-    const browser = await playwright.chromium.launch({ headless: true })
+    const browser = await chromium.launch({ headless: true })
     const page = await browser.newPage()
     await page.goto(`file://${__dirname}/public/index.html`, {
       waitUntil: 'networkidle',
@@ -71,12 +72,13 @@ async function buildPdf() {
 }
 
 async function watch() {
+  const { watch } = await import('chokidar')
   console.log('👀 Watching for changes...')
-  chokidar.watch(await glob('src/styles/**/*.css'), { ignoreInitial: true }).on('all', async (_event, path) => {
+  watch(await glob('src/styles/**/*.css'), { ignoreInitial: true }).on('all', async (_event, path) => {
     console.log(`🛠️ Changes detected in ${path}`)
     await buildStyles()
   })
-  chokidar.watch('src/resume.json', { ignoreInitial: true }).on('all', async (_event, path) => {
+  watch('src/resume.json', { ignoreInitial: true }).on('all', async (_event, path) => {
     console.log(`🛠️ Changes detected in ${path}`)
     await copyPublic()
   })

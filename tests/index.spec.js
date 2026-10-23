@@ -13,7 +13,7 @@ test.describe('Tests', () => {
   })
 
   test('dates are formatted correctly', async ({ page }) => {
-    const pageText = await page.locator('body').innerText()
+    const pageText = await page.locator('body').textContent()
     if (pageText) {
       const normalizedDateText = pageText.replace(/\s+/g, ' ').trim()
       expect(normalizedDateText).toContain('4th Jul 2016 - 30th Jun 2023')
