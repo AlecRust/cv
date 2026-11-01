@@ -11,6 +11,10 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  # PDF generation uses Playwright, so resume-cli's Chromium download is unnecessary.
+  PUPPETEER_SKIP_DOWNLOAD: "true"
+
 jobs:
   lint:
     name: Lint
